@@ -3,7 +3,7 @@
 import { MenuOutlined } from "@ant-design/icons";
 import { Button, Drawer, Menu } from "antd";
 import React, { useState } from "react";
-// import '../app/style.css';
+
 import Link from "next/link";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -37,31 +37,32 @@ const Navbar = () => {
 };
 const AppMenu = ({ isinline = false }) => {
   return (
-    <Menu
-    className="border-none text-lg p-4 bg-[#1E1E1E] custom-menu "
+    <div className="">
+      <Menu
+    className="   text-lg font-bold p-4 bg-[#1F2937] custom-menu "
       mode={isinline ? "inline" : "horizontal"}
       items={[
         {
-          label: <Link style={{color:'white'}} href={'/'}><Button type="primary" danger>
-          Primary
+          label: <Link style={{color:'white'}} href={'/'}><Button className="rounded-full font-bold" type="primary" danger>
+          Home
         </Button></Link>,
           key: "Home",
         },
         {
-          label: <Link style={{color:'white'}} href={'/about'}>About</Link>,
-          key: "About",
+          label: <Link style={{color:'white'}} href={'/service'}>Service</Link>,
+          key: "services",
         },
         {
           label: <Link style={{color:'white'}} href={'/contact'}>Contact</Link>,
           key: "contact Us",
         },
         {
-          label: <Link style={{color:'white'}} href={'/service'}>Service</Link>,
-          key: "services",
+          label: <Link style={{color:'white'}} href={'/about'}>About</Link>,
+          key: "About",
         },
-      
       ]}
     ></Menu>
+    </div>
   );
 };
 export default Navbar;
