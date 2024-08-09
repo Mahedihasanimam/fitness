@@ -10,7 +10,7 @@ const Hero = () => {
       <section className="bg-[#001118] text-white ">
         <div className="container flex flex-col justify-between  mx-auto pt-20 lg:flex-row lg:justify-between ">
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-lg xl:max-w-xl lg:text-left">
-            <h1 className="text-6xl font-bold leading-none sm:text-[78px]">
+            <h1 className="lg:text-6xl text-4xl font-bold leading-none sm:text-[78px]">
               Get body in <span className="italic">shape</span> & stay healthy
             </h1>
             <p className="mt-6 mb-8 text-lg sm:mb-12 text-[#FFFFFF80]">
