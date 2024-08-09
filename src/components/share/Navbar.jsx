@@ -8,7 +8,7 @@ import Link from "next/link";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <div className="absolute w-full z-50 bg-[#001118] font-inter my-10 ">
+    <div className="absolute w-full z-50 bg-[#001118] font-inter my-10 px-4 ">
         <div className="container mx-auto   text-white">
       <div className="flex items-center justify-between px-2 ">
         <MenuOutlined 

@@ -48,7 +48,7 @@ const Habits = () => {
             </p>
           </div>
         </div>
-        <div className="text-center max-w-md">
+        <div className="text-center max-w-lg">
           <div className="avatar">
             <div className="w-36 rounded-full">
               <Image height={0} width={0} src={image2} />
