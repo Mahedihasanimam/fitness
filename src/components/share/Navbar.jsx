@@ -60,6 +60,10 @@ const AppMenu = ({ isinline = false }) => {
           label: <Link style={{color:'white'}} href={'/about'}>About</Link>,
           key: "About",
         },
+        {
+          label: <Link style={{color:'white'}} href={'/dashboard'}>Dashboard</Link>,
+          key: "dashboard",
+        },
       ]}
     ></Menu>
     </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import image from "../../public/image/Rectangle 22.png";
+import image1 from "../../public/image/Rectangle 22.png";
 const Mycard = () => {
   return (
     <div className="bg-[#001118] py-20 px-2">
@@ -19,7 +19,7 @@ const Mycard = () => {
           </a>
         </div>
         <div>
-          <Image height={0} width={0} src={image}/>
+          <Image height={0} width={0} src={image1} alt="image"/>
         </div>
       </div>
     </div>

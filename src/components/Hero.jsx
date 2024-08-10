@@ -39,7 +39,7 @@ const Hero = () => {
               height={0}
               width={0}
               src={hero}
-              alt=""
+              alt="image"
               className="object-contain h-full"
             />
 

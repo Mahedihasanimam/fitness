@@ -7,7 +7,7 @@ import image3 from "../../public/image/image 4.png";
 import { Typography } from "antd";
 import React from "react";
 
-const Habits = () => {
+const  Habits = () => {
   return (
    <div className="bg-[#001118] text-white">
      <div className=" container mx-auto">
@@ -25,7 +25,7 @@ const Habits = () => {
         <div className="text-center max-w-lg px-4">
           <div className="avatar">
             <div className="w-36 rounded-full">
-              <Image height={0} width={0} src={image2} />
+              <Image height={0} width={0} src={image2} alt="image" />
             </div>
           </div>
           <div>
@@ -38,7 +38,7 @@ const Habits = () => {
         <div className="text-center max-w-lg">
           <div className="avatar">
             <div className="w-36 rounded-full">
-              <Image height={0} width={0} src={image1} />
+              <Image height={0} width={0} src={image1} alt="image" />
             </div>
           </div>
           <div>
@@ -51,7 +51,7 @@ const Habits = () => {
         <div className="text-center max-w-lg">
           <div className="avatar">
             <div className="w-36 rounded-full">
-              <Image height={0} width={0} src={image2} />
+              <Image height={0} width={0} src={image2} alt="image" />
             </div>
           </div>
           <div>
@@ -64,7 +64,7 @@ const Habits = () => {
         <div className="text-center max-w-md">
           <div className="avatar">
             <div className="w-36 rounded-full">
-              <Image height={0} width={0} src={image3} />
+              <Image height={0} width={0} src={image3} alt="image" />
             </div>
           </div>
           <div>
