@@ -9,6 +9,8 @@ import {
   ClusterOutlined,
   ContactsOutlined,
   DashboardFilled,
+  HomeOutlined,
+  LoginOutlined,
   MessageOutlined,
   NotificationFilled,
   RiseOutlined,
@@ -23,6 +25,9 @@ import { Badge, Flex, Image, Input, Layout, Menu, Space, theme } from "antd";
 import { Progress } from "antd";
 import Search from "antd/es/transfer/search";
 import MyChart from "@/components/MyChart";
+import PiChart from "@/components/PiChart";
+import Acvity from "@/components/Acvity";
+import Link from "next/link";
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
   UserOutlined,
@@ -41,11 +46,11 @@ const page = () => {
   } = theme.useToken();
   return (
     <div className="bg-[#252B3B]">
-      <Layout className="h-full ">
+      <Layout className="h-full container mx-auto">
         <Sider
           breakpoint="lg"
-          collapsedWidth="0"
-          className="bg-[#252B3B]"
+         collapsedWidth="0"
+          className="bg-[#252B3B] flex flex-col justify-between "
           onBreakpoint={(broken) => {
             console.log(broken);
           }}
@@ -98,6 +103,28 @@ const page = () => {
                 key: "/message",
               },
             ]}
+          />
+          <Menu
+          theme="dark"
+          mode="inline"
+          defaultSelectedKeys={["4"]}
+          className=" pt-6 text-lg space-y-2 capitalize mt-[100%] "
+          items={[
+            
+
+            {
+              label: <label><Link href={'/'}>Home</Link></label>,
+              icon: <HomeOutlined />,
+              key: "/",
+            },
+            {
+              label: "Log out",
+              icon: <LoginOutlined />,
+              key: "/logout",
+            },
+            
+          ]}
+          
           />
         </Sider>
         <Layout>
@@ -152,7 +179,7 @@ const page = () => {
               <h1 className="text-4xl font-bold">Dashboard</h1>
 
               <div className="grid gap-4 grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 lg:space-y-0 md:space-y-4 space-y-6 my-6">
-                <div className="bg-[#252B3B] text-white max-w-xs  flex items-center justify-around px-6 py-4 rounded-lg ">
+                <div className="bg-[#252B3B] text-white lg:max-w-xs md:max-w-xs w-10/12 mx-auto  flex items-center justify-around px-6 py-4 rounded-lg ">
                   <div>
                     <UsergroupAddOutlined
                       style={{ fontSize: 50 }}
@@ -169,13 +196,13 @@ const page = () => {
                   </div>
                 </div>
 
-                <div className="bg-[#252B3B] text-white max-w-xs  flex items-center justify-around px-6 py-4 rounded-lg ">
+                <div className="bg-[#252B3B] text-white lg:max-w-xs md:max-w-xs w-10/12  mx-auto  flex items-center justify-around px-6 py-4 rounded-lg ">
                   <div>
                     <Progress
                       className="text-white" 
                       size={80}
                       style={{
-                        color: "white", // Change the text color directly
+                        color: "white", 
                       }}
                       strokeColor={"#61609A"}
                       type="circle"
@@ -191,7 +218,7 @@ const page = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#252B3B] text-white max-w-xs  flex items-center justify-around px-6 py-4 rounded-lg ">
+                <div className="bg-[#252B3B] text-white lg:max-w-xs md:max-w-xs w-10/12 mx-auto   flex items-center justify-around px-6 py-4 rounded-lg ">
                   <div>
                     <RiseOutlined
                       style={{ fontSize: 50 }}
@@ -207,7 +234,7 @@ const page = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#252B3B] text-white max-w-xs  flex items-center justify-around px-6 py-4 rounded-lg ">
+                <div className="bg-[#252B3B] text-white lg:max-w-xs md:max-w-xs w-10/12 mx-auto   flex items-center justify-around px-6 py-4 rounded-lg ">
                   <div>
                     <RiseOutlined
                       style={{ fontSize: 50 }}
@@ -225,8 +252,12 @@ const page = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="lg:flex md:flex flex-row items-center justify-between gap-8 ">
                 <MyChart />
+                <div>
+                <PiChart/>
+                <Acvity/>
+                </div>
               </div>
             </div>
           </Content>
@@ -236,7 +267,7 @@ const page = () => {
             }}
             className="bg-black text-white"
           >
-            Ant Design ©{new Date().getFullYear()} Created by Ant UED
+            ©{new Date().getFullYear()} Created by Mehedi
           </Footer>
         </Layout>
       </Layout>

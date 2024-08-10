@@ -61,7 +61,7 @@ const data = [
 
 const MyChart = () => {
   return (
-   <div className='max-w-3xl bg-[#252B3B] p-4 rounded-md'>
+   <div className='lg:w-3/5 w-full bg-[#252B3B] p-4 rounded-md'>
     <div className='lg:flex md:flex items-center justify-between'>
       <h3 className='text-4xl font-bold p-8'>projects Statics</h3>
       <Segmented  className='bg-[#1E222E] text-white'
