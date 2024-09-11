@@ -28,3 +28,9 @@ body {
     text-wrap: balance;
   }
 }
+.mymenu .ant-menu-item .ant-menu-item-selected{
+  background-color: red;
+}
+li.ant-menu-item.ant-menu-item-selected{
+  background-color: red;
+}

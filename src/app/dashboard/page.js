@@ -21,7 +21,17 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
-import { Badge, Flex, Image, Input, Layout, Menu, Space, theme } from "antd";
+import {
+  Badge,
+  ConfigProvider,
+  Flex,
+  Image,
+  Input,
+  Layout,
+  Menu,
+  Space,
+  theme,
+} from "antd";
 import { Progress } from "antd";
 import Search from "antd/es/transfer/search";
 import MyChart from "@/components/MyChart";
@@ -46,11 +56,13 @@ const page = () => {
   } = theme.useToken();
   return (
     <div className="bg-[#252B3B]">
-      <Layout className="h-full container mx-auto">
+      <Layout
+        className="h-full"
+      >
         <Sider
           breakpoint="lg"
-         collapsedWidth="0"
-          className="bg-[#252B3B] flex flex-col justify-between "
+          collapsedWidth="0"
+          className="bg-[#252B3B]"
           onBreakpoint={(broken) => {
             console.log(broken);
           }}
@@ -63,7 +75,7 @@ const page = () => {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={["4"]}
-            className="mb-12 pt-6 text-lg space-y-2 capitalize "
+            className="mb-12 pt-6 text-lg space-y-2 capitalize mymenu "
             items={[
               {
                 label: (
@@ -105,26 +117,26 @@ const page = () => {
             ]}
           />
           <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["4"]}
-          className=" pt-6 text-lg space-y-2 capitalize mt-[100%] "
-          items={[
-            
-
-            {
-              label: <label><Link href={'/'}>Home</Link></label>,
-              icon: <HomeOutlined />,
-              key: "/",
-            },
-            {
-              label: "Log out",
-              icon: <LoginOutlined />,
-              key: "/logout",
-            },
-            
-          ]}
-          
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={["4"]}
+            className=" pt-6 text-lg space-y-2 capitalize mt-[100%] "
+            items={[
+              {
+                label: (
+                  <label>
+                    <Link href={"/"}>Home</Link>
+                  </label>
+                ),
+                icon: <HomeOutlined />,
+                key: "/",
+              },
+              {
+                label: "Log out",
+                icon: <LoginOutlined />,
+                key: "/logout",
+              },
+            ]}
           />
         </Sider>
         <Layout>
@@ -137,7 +149,7 @@ const page = () => {
                     color: "white",
                     "--placeholder-color": "white",
                   }}
-                  placeholder="large size"
+                  placeholder="search"
                   size="large"
                   className="border border-gray-500 rounded-sm  placeholder:text-white max-w-sm"
                   prefix={<SearchOutlined />}
@@ -151,10 +163,10 @@ const page = () => {
                     gap={20}
                   >
                     <Badge count={6}>
-                      <BellOutlined style={{ color: "white", fontSize: 30 }} />
+                      <BellOutlined className="cursor-pointer" style={{ color: "white", fontSize: 30 }} />
                     </Badge>
                     <UserOutlined
-                      className="border p-1 rounded-full"
+                      className="border p-1 rounded-full cursor-pointer"
                       style={{ color: "white", fontSize: 30 }}
                     />
                   </Flex>
@@ -178,6 +190,8 @@ const page = () => {
             >
               <h1 className="text-4xl font-bold">Dashboard</h1>
 
+              
+
               <div className="grid gap-4 grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 lg:space-y-0 md:space-y-4 space-y-6 my-6">
                 <div className="bg-[#252B3B] text-white lg:max-w-xs md:max-w-xs w-10/12 mx-auto  flex items-center justify-around px-6 py-4 rounded-lg ">
                   <div>
@@ -198,16 +212,32 @@ const page = () => {
 
                 <div className="bg-[#252B3B] text-white lg:max-w-xs md:max-w-xs w-10/12  mx-auto  flex items-center justify-around px-6 py-4 rounded-lg ">
                   <div>
-                    <Progress
-                      className="text-white" 
-                      size={80}
-                      style={{
-                        color: "white", 
+                    <ConfigProvider
+                      theme={{
+                        "components": {
+                          "Button": {
+                            "defaultActiveColor": "rgb(148,93,226)",
+                            "borderColorDisabled": "rgb(242,16,16)",
+                            "dangerColor": "rgb(241,107,107)"
+                          },
+                          "Progress": {
+                            "circleTextColor": "rgb(255,255,255)",
+                            "defaultColor": "rgb(83,245,1)"
+                          }
+                        }
                       }}
-                      strokeColor={"#61609A"}
-                      type="circle"
-                      percent={76}
-                    />
+                    >
+                      <Progress
+                        className="text-white"
+                        size={80}
+                        style={{
+                          color: "white",
+                        }}
+                        strokeColor={"#61609A"}
+                        type="circle"
+                        percent={76}
+                      />
+                    </ConfigProvider>
                   </div>
                   <div>
                     <h3 className=" font-bold text-lg">Total TAsk Done</h3>
@@ -255,8 +285,8 @@ const page = () => {
               <div className="lg:flex md:flex flex-row items-center justify-between gap-8 ">
                 <MyChart />
                 <div>
-                <PiChart/>
-                <Acvity/>
+                  <PiChart />
+                  <Acvity />
                 </div>
               </div>
             </div>

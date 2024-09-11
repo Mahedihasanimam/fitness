@@ -8,7 +8,7 @@ import Link from "next/link";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <div className="absolute w-full z-50 bg-[#001118] font-inter my-10 px-4 ">
+    <div className="absolute w-full z-50 bg-[#E6533C] text-white font-inter my-10 px-4 ">
         <div className="container mx-auto   text-white">
       <div className="flex items-center justify-between px-2 ">
         <MenuOutlined 
@@ -16,7 +16,7 @@ const Navbar = () => {
         onClick={()=>{
             setOpenMenu(true)
         }} />
-        <h3 className="font-bold text-4xl text-[#E6533C] italic ">Fitness</h3>
+        <h3 className="font-bold text-5xl text-white italic ">Fitness</h3>
         <div className="lg:flex md:flex items-center justify-center hidden ">
           <AppMenu className="" />
         </div>
@@ -37,15 +37,16 @@ const Navbar = () => {
 };
 const AppMenu = ({ isinline = false }) => {
   return (
-    <div className="font-inter ">
+    <div className="font-inter  ">
+     
       <Menu
-    className="   text-lg  p-4 bg-[#001118] custom-menu "
+    className="   text-lg  p-4 bg-[#E6533C] custom-menu text-white font-bold "
       mode={isinline ? "inline" : "horizontal"}
       items={[
         {
-          label: <Link style={{color:'white'}} href={'/'}><Button className="rounded-full font-bold" type="primary" danger>
+          label: <Link style={{color:'white'}} href={'/'}>
           Home
-        </Button></Link>,
+</Link>,
           key: "Home",
         },
         {

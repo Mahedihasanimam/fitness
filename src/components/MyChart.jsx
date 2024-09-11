@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Segmented } from 'antd';
+import { ConfigProvider, Segmented } from 'antd';
 import {
   ComposedChart,
   Line,
@@ -64,12 +64,33 @@ const MyChart = () => {
    <div className='lg:w-3/5 w-full bg-[#252B3B] p-4 rounded-md'>
     <div className='lg:flex md:flex items-center justify-between'>
       <h3 className='text-4xl font-bold p-8'>projects Statics</h3>
-      <Segmented  className='bg-[#1E222E] text-white'
+   
+
+  <ConfigProvider
+  theme={
+    {
+      "components": {
+       
+        "Segmented": {
+          "itemActiveBg": "rgba(128,124,124,0.15)",
+          "itemColor": "rgba(155,152,152,0.65)",
+          "itemHoverColor": "rgba(94,92,92,0.88)",
+          "itemSelectedBg": "rgb(56,53,53)",
+          "itemHoverBg": "rgba(172,159,159,0.06)",
+          "colorText": "rgba(245,241,241,0.88)"
+        }
+      }
+    }
+  }
+  
+  >
+       <Segmented  className='bg-[#1E222E] text-white'
     options={['Daily', 'Weekly', 'Monthly', 'Quarterly', 'Yearly']}
     onChange={(value) => {
       console.log(value); 
     }}
   />
+  </ConfigProvider>
     </div>
      <div style={{ width: "100%", height: 400 }}>
       <ResponsiveContainer >
