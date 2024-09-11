@@ -12,7 +12,7 @@ const  Habits = () => {
    <div className="bg-[#001118] text-white">
      <div className=" container mx-auto">
       <div className="max-w-4xl mx-auto text-center py-24 px-4">
-        <h1 style={{ color: "white" }} className="font-extrabold  text-[48px]">
+        <h1 style={{ color: "white" }} className="font-bold pb-4  text-6xl">
           Change Your Habits
         </h1>
         <p className="text-[#FFFFFF80]">
@@ -22,52 +22,52 @@ const  Habits = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 lg:grid-cols-4 space-y-8 text-center">
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
-            <div className="w-36 rounded-full">
+            <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image2} alt="image" />
             </div>
           </div>
-          <div>
+          <div className="max-w-[200px] mx-auto pt-2">
             <h3 className="text-lg font-bold">Movement</h3>
             <p className="text-[#FFFFFF80] max-w-lg">
               We believe fitness should be accessible to everyone
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
-            <div className="w-36 rounded-full">
+            <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image1} alt="image" />
             </div>
           </div>
-          <div>
+          <div className="max-w-[200px] mx-auto pt-2">
             <h3 className="text-lg font-bold">Time</h3>
             <p className="text-[#FFFFFF80] max-w-sm text-center">
               We believe fitness should be accessible to everyone
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
-            <div className="w-36 rounded-full">
+            <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image2} alt="image" />
             </div>
           </div>
-          <div>
+          <div className="max-w-[200px] mx-auto pt-2">
             <h3 className="text-lg font-bold">Practice</h3>
             <p className="text-[#FFFFFF80] max-w-md">
               We believe fitness should be accessible to everyone
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
-            <div className="w-36 rounded-full">
+            <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image3} alt="image" />
             </div>
           </div>
-          <div>
+          <div className="max-w-[200px] mx-auto pt-2">
             <h3 className="text-lg font-bold">Weight loss</h3>
             <p className="text-[#FFFFFF80] max-w-md">
               We believe fitness should be accessible to everyone

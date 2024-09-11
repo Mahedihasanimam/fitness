@@ -3,7 +3,7 @@ import React from "react";
 import image1 from "../../public/image/Rectangle 22.png";
 const Mycard = () => {
   return (
-    <div className="bg-[#001118] py-20 px-2">
+    <div className="bg-[#001118] pt-20 pb-12 px-2">
       <div className="bg-[#222222] text-white rounded-lg container mx-auto p-12 lg:flex md:flex space-y-12 items-center justify-between gap-8">
         <div className="max-w-lg">
           <h1 className="lg:text-7xl md:text-6xl text-4xl font-bold">Run an Extra Mile Easily</h1>

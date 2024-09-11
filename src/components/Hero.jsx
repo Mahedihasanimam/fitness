@@ -7,7 +7,7 @@ const Hero = () => {
     
   return (
     <div>
-      <section className="bg-[#001118] text-white ">
+      <section className=" bg-gradient-to-r from-[#0b0b0b] via-[#333232] to-[#0b0b0b] text-white ">
         <div className="container flex flex-col justify-between pt-12  mx-auto  lg:flex-row lg:justify-between">
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-lg xl:max-w-xl lg:text-left">
             <h1 className="lg:text-6xl text-4xl font-bold leading-none sm:text-[78px]">

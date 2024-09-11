@@ -71,7 +71,7 @@ const Navbar = () => {
               setOpenMenu(true);
             }}
           />
-          <h3 className="font-bold text-5xl text-white italic">Fitness</h3>
+          <Link href={'/'} className="font-bold text-5xl text-white italic">Fitness</Link>
           <div className="lg:flex md:flex items-center justify-center hidden">
             <AppMenu menuProps={menuProps} servicesProps={servicesProps} className="" />
           </div>
@@ -121,7 +121,7 @@ const AppMenu = ({ isinline = false, menuProps, servicesProps }) => {
           },
           {
             label: (
-              <Link style={{ color: "white" }} href="/contact">
+              <Link style={{ color: "white" }} href="/#">
                 Contact
               </Link>
             ),
@@ -129,7 +129,7 @@ const AppMenu = ({ isinline = false, menuProps, servicesProps }) => {
           },
           {
             label: (
-              <Link className="hover:border-b-[#fff]" style={{ color: "white", }} href="/about">
+              <Link className="hover:border-b-[#fff]" style={{ color: "white", }} href="/#">
                 About
               </Link>
             ),
