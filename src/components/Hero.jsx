@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../../public/image/heroimg.png";
+import hero from "../../public/image/power-healthy-runner-handsome-lifestyle.png";
 import Image from "next/image";
 import { Button, Flex } from "antd";
 import { PlayCircleOutlined } from "@ant-design/icons";
@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div>
       <section className="bg-[#001118] text-white ">
-        <div className="container flex flex-col justify-between  mx-auto pt-20 lg:flex-row lg:justify-between ">
+        <div className="container flex flex-col justify-between pt-12  mx-auto  lg:flex-row lg:justify-between">
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-lg xl:max-w-xl lg:text-left">
             <h1 className="lg:text-6xl text-4xl font-bold leading-none sm:text-[78px]">
               Get body in <span className="italic">shape</span> & stay healthy
@@ -43,13 +43,13 @@ const Hero = () => {
               className="object-contain h-full"
             />
 
-            <div className=" rounded-md absolute top-24 left-2/3 lg:p-6 p-2  border-2 border-[#FFFFFF1A] bg-[#FFFFFF1A] ">
+            <div className=" rounded-md absolute top-1/4 right-5 lg:p-6 p-2  border-2 border-[#FFFFFF1A] bg-[#FFFFFF1A] ">
               <h3 className="lg:text-6xl text-4xl  font-extrabold ">500+</h3>
               <p className="font-normal text-[#FFFFFFA6] capitalize text-lg">
                 Free Workout Videos
               </p>
             </div>
-            <div className=" rounded-md absolute bottom-24 lg:right-2/3 md:right-2/3 px-6 py-2  border-2 border-[#FFFFFF1A] bg-[#3030308A] ">
+            <div className=" rounded-md absolute bottom-1/4 lg:right-[58%]  md:right-2/3 px-6 py-2  border-2 border-[#FFFFFF1A] bg-[#3030308A] ">
               <div className="flex items-center justify-center gap-4 " >
 
                 <div className="h-[40px] w-[40px] bg-[#E6533C] rounded-full">

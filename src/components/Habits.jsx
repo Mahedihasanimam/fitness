@@ -21,8 +21,8 @@ const  Habits = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 space-y-8 text-center">
-        <div className="text-center max-w-lg px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 lg:grid-cols-4 space-y-8 text-center">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full">
               <Image height={0} width={0} src={image2} alt="image" />
@@ -35,7 +35,7 @@ const  Habits = () => {
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full">
               <Image height={0} width={0} src={image1} alt="image" />
@@ -48,7 +48,7 @@ const  Habits = () => {
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full">
               <Image height={0} width={0} src={image2} alt="image" />
@@ -61,7 +61,7 @@ const  Habits = () => {
             </p>
           </div>
         </div>
-        <div className="text-center max-w-md">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-red-500 hover:border-r-red-500 hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full">
               <Image height={0} width={0} src={image3} alt="image" />

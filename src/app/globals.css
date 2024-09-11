@@ -34,3 +34,22 @@ body {
 li.ant-menu-item.ant-menu-item-selected{
   background-color: red;
 }
+
+.ant-dropdown.css-dev-only-do-not-override-d2lrxs.ant-dropdown-placement-bottomLeft {
+  width: 200px;
+  color: white;
+}
+ul.ant-dropdown-menu.ant-dropdown-menu-root.ant-dropdown-menu-vertical.ant-dropdown-menu-light.css-dev-only-do-not-override-d2lrxs {
+  background-color: #E6533C;
+  
+}
+span.ant-dropdown-menu-title-content {
+  color: white;
+  font-weight: bold;
+}
+span.anticon.anticon-home.ant-dropdown-menu-item-icon {
+  color: white;
+}
+span.anticon.anticon-down.ant-dropdown-menu-item-icon {
+  color: white;
+}
