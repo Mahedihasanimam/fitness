@@ -21,7 +21,7 @@ const  Habits = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 lg:grid-cols-4 space-y-8 text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-4 px-2 lg:grid-cols-4 space-y-8 text-center">
         <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 border-r-4 border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full border-4 border-[#2f2f2f]">

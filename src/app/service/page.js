@@ -1,4 +1,4 @@
-import MyChart from '@/components/MyChart';
+import MyChart from '@/components/dashboard/MyChart';
 import React from 'react';
 
 const Service = () => {

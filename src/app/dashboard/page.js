@@ -34,9 +34,9 @@ import {
 } from "antd";
 import { Progress } from "antd";
 import Search from "antd/es/transfer/search";
-import MyChart from "@/components/MyChart";
-import PiChart from "@/components/PiChart";
-import Acvity from "@/components/Acvity";
+import MyChart from "@/components/dashboard/MyChart";
+import PiChart from "@/components/dashboard/PiChart";
+import Acvity from "@/components/dashboard/Acvity";
 import Link from "next/link";
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
