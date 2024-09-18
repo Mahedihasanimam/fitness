@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="bg-[#222222] text-white">
       <div className="grid grid-cols-1 space-y-12 md:grid-cols-2 lg:grid-cols-3 container mx-auto p-16">
-        <div className="px-6 space-y-6">
+        <div className="lg:px-6 space-y-6">
           <h1 className="lg:text-6xl text-4xl font-extrabold text-[#E6533C]">
             Fitness
           </h1>

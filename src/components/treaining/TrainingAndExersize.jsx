@@ -8,13 +8,13 @@ import image4 from "../../../public/image/gym3.jpg";
 import image5 from "../../../public/image/gym4.jpg";
 import image6 from "../../../public/image/pushup.jpg";
 import girltrainer from '../../../public/image/girltrainer.jpg'
-import girltrainer2 from '../../../public/image/girltrainer2.png'
+import girltrainer2 from '../../../public/image/girltrainer3.png'
 const TrainingAndExersize = () => {
   return (
-    <div className="bg-[#001118] text-white">
+    <div className="bg-[#001118] text-white p-2">
       <div className="container mx-auto py-12">
         <div className=" space-y-4 max-w-2xl my-6">
-          <h3 className="text-6xl font-bold text-white">
+          <h3 className="lg:text-6xl md:text-4xl text-3xl font-bold text-white">
             Trainings and Exercises
           </h3>
           <p className="text-[#FFFFFF80]">
@@ -24,7 +24,7 @@ const TrainingAndExersize = () => {
         </div>
 
         <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 ">
             <div className="relative group col-span-12 lg:col-span-3">
               <div className="h-full w-full absolute bg-[#06FFD280]  opacity-0 group-hover:opacity-50 transition-opacity duration-300">
                 <h3 className="p-4 text-white font-bold text-2xl">

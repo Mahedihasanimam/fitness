@@ -1,5 +1,5 @@
 import MyCard from "@/components/Card";
-import Footer from "@/components/Footer";
+import Footer from "@/components/share/Footer";
 import Habits from "@/components/Habits";
 import Hero from "@/components/Hero";
 import TrainingAndExersize from "@/components/treaining/TrainingAndExersize";

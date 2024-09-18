@@ -12,7 +12,7 @@ const  Habits = () => {
    <div className="bg-[#001118] text-white">
      <div className=" container mx-auto">
       <div className="max-w-4xl mx-auto text-center py-24 px-4">
-        <h1 style={{ color: "white" }} className="font-bold pb-4  text-6xl">
+        <h1 style={{ color: "white" }} className="font-bold pb-4  lg:text-6xl md:text-4xl text-3xl">
           Change Your Habits
         </h1>
         <p className="text-[#FFFFFF80]">
