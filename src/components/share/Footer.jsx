@@ -4,12 +4,25 @@ import {
   PinterestFilled,
   TwitterCircleFilled,
 } from "@ant-design/icons";
+import { Button } from "antd";
 import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-[#222222] text-white">
-      <div className="grid grid-cols-1 space-y-12 md:grid-cols-2 lg:grid-cols-3 container mx-auto p-16">
+    <div className="bg-[#222222] text-white ">
+      <div className="container mx-auto">
+        {/* NEWS LATER SECTION --------------------------------- */}
+        <div className="flex  items-center justify-between p-12 bg-[#E6533C] text-center w-10/12 -translate-y-20 mx-auto rounded-md ">
+          <h3 className="text-4xl font-bold">Subscribe to our newsletter</h3>
+          <div>
+          <input className="p-[14px] rounded-full  border-none outline-none text-black" type="email" placeholder="Enter your email" />
+          <Button style={{padding: "26.5px 20px", backgroundColor:'black',color:'white',fontWeight:'bold',}} className="bg-black text-white  rounded-full border-none -translate-x-14">Subscribe</Button>
+          </div>
+        </div>
+        {/* NEWS LATER SECTION --------------------------------- */}
+
+        {/* FOOTER SECTION --------------------------------- */}
+      <div className="grid grid-cols-1 space-y-12 md:grid-cols-3 lg:grid-cols-4  lg:py-16 md:p-6 p-4">
         <div className="lg:px-6 space-y-6">
           <h1 className="lg:text-6xl text-4xl font-extrabold text-[#E6533C]">
             Fitness
@@ -46,7 +59,16 @@ const Footer = () => {
             <li>Contact Us</li>
             <li>Affiliate Program</li>
             <li>About Us</li>
-          </ul>
+          </ul> 
+        </div>
+        <div>
+          <h3 className="text-lg font-bold mb-4">Get Started</h3>
+          <ul className="list-none text-[#FFFFFF80] space-y-4">
+            <li>Service</li>
+            <li>Contact Us</li>
+            <li>Affiliate Program</li>
+            <li>About Us</li>
+          </ul> 
         </div>
       </div>
 
@@ -54,6 +76,7 @@ const Footer = () => {
         {" "}
         &copy; All Right reserved by mehedi{" "}
       </div>
+    </div>
     </div>
   );
 };

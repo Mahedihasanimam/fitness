@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import image1 from "../../public/image/image 2.png";
-import image2 from "../../public/image/image 3.png";
-import image3 from "../../public/image/image 4.png";
+import image1 from "../../public/image/bodybuilder1.jpg";
+import image2 from "../../public/image/bodybuilder2.jpg";
+import image3 from "../../public/image/bodybuilder3.jpg";
 
 import { Typography } from "antd";
 import React from "react";
@@ -22,7 +22,7 @@ const  Habits = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 lg:grid-cols-4 space-y-8 text-center">
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 border-r-4 border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image2} alt="image" />
@@ -35,7 +35,7 @@ const  Habits = () => {
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 border-r-4 border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image1} alt="image" />
@@ -48,7 +48,7 @@ const  Habits = () => {
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 border-r-4 border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image2} alt="image" />
@@ -61,7 +61,7 @@ const  Habits = () => {
             </p>
           </div>
         </div>
-        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 hover:border-r-4 cursor-pointer  px-4">
+        <div className="text-center max-w-lg border border-[#FFFFFF20] rounded-lg p-2 hover:border-b-[#E6533C] hover:border-r-[#E6533C] hover:border-b-4 border-r-4 border-b-4 hover:border-r-4 cursor-pointer  px-4">
           <div className="avatar">
             <div className="w-36 rounded-full border-4 border-[#2f2f2f]">
               <Image height={0} width={0} src={image3} alt="image" />

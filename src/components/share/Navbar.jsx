@@ -62,16 +62,17 @@ const Navbar = () => {
   };
 
   return (
-    <div className="absolute w-full z-50 bg-[#E6533C] text-white font-inter my-10 px-4">
+    <div className="absolute w-full z-50 bg-[#E6533C] text-white font-inter lg:my-10 lg:p-0 p-4 px-4">
       <div className="container mx-auto text-white">
         <div className="flex items-center justify-between px-2">
           <MenuOutlined
-            className="lg:hidden md:hidden block"
+    
+            className="lg:hidden md:hidden block text-2xl"
             onClick={() => {
               setOpenMenu(true);
             }}
           />
-          <Link href={'/'} className="font-bold text-5xl text-white italic">Fitness</Link>
+          <Link href={'/'} className="font-bold lg:text-5xl text-4xl text-white italic">Fitness</Link>
           <div className="lg:flex md:flex items-center justify-center hidden">
             <AppMenu menuProps={menuProps} servicesProps={servicesProps} className="" />
           </div>
