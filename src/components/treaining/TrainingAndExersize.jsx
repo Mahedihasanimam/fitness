@@ -6,8 +6,6 @@ import image3 from "../../../public/image/phsical2.jpg";
 
 import image4 from "../../../public/image/gym3.jpg";
 import image5 from "../../../public/image/gym4.jpg";
-import image6 from "../../../public/image/pushup.jpg";
-import girltrainer from '../../../public/image/girltrainer.jpg'
 import girltrainer2 from '../../../public/image/girltrainer3.png'
 const TrainingAndExersize = () => {
   return (

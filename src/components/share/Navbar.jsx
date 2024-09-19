@@ -1,151 +1,179 @@
-"use client";
 
-import { DownOutlined, HomeOutlined, MenuOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Drawer, Dropdown, Menu, message, Space } from "antd";
+"use client";
 import React, { useState } from "react";
+import { Menu, Dropdown, Button } from "antd";
+import {
+  AlertOutlined,
+  ClockCircleOutlined,
+  DashboardOutlined,
+  FormOutlined,
+  HomeOutlined,
+  MailFilled,
+  MenuOutlined,
+  OrderedListOutlined,
+  PhoneOutlined,
+  UserDeleteOutlined,
+} from "@ant-design/icons";
+import "antd/dist/reset.css";
 import Link from "next/link";
+// import "./App.css";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleMenuClick = (e) => {
-    message.info("Click on menu item.");
-    console.log("click", e);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const items = [
-    {
-      label: "Home1",
-      key: "1",
-      icon: <HomeOutlined />,
-    },
-    {
-      label: "Home2",
-      key: "2",
-      icon: <HomeOutlined />,
-    },
-    {
-      label: "Home3",
-      key: "3",
-      icon: <HomeOutlined />,
-      danger: true,
-    },
-  ];
+  const workoutsMenu = (
+    <Menu>
+      <Menu.Item key="1">Cardio</Menu.Item>
+      <Menu.Item key="2">Strength Training</Menu.Item>
+      <Menu.Item key="3">HIIT</Menu.Item>
+      <Menu.Item key="4">Endurance</Menu.Item>
+      <Menu.Item key="5">Flexibility</Menu.Item>
+      <Menu.Item key="6">Core Workouts</Menu.Item>
+      <Menu.Item key="7">Bodyweight Training</Menu.Item>
+    </Menu>
+  );
 
-  const serviceitems = [
-    {
-      label: "service1",
-      key: "1",
-      icon: <DownOutlined />,
-    },
-    {
-      label: "Service2",
-      key: "2",
-      icon: <HomeOutlined />,
-    },
-    {
-      label: "Service3",
-      key: "3",
-      icon: <HomeOutlined />,
-      danger: true,
-    },
-  ];
-
-  const menuProps = {
-    items,
-    onClick: handleMenuClick,
-  };
-
-  const servicesProps = {
-    items: serviceitems, // Corrected to pass the items array from serviceitems
-    onClick: handleMenuClick,
-  };
+  // Dropdown menu for Classes
+  const classesMenu = (
+    <Menu>
+      <Menu.Item key="1">Yoga</Menu.Item>
+      <Menu.Item key="2">Pilates</Menu.Item>
+      <Menu.Item key="3">Spinning</Menu.Item>
+      <Menu.Item key="4">Zumba</Menu.Item>
+      <Menu.Item key="5">CrossFit</Menu.Item>
+      <Menu.Item key="6">Boxing</Menu.Item>
+      <Menu.Item key="7">Dance Aerobics</Menu.Item>
+      <Menu.Item key="8">Barre</Menu.Item>
+      <Menu.Item key="9">Kickboxing</Menu.Item>
+      <Menu.Item key="10">Bootcamp</Menu.Item>
+    </Menu>
+  );
 
   return (
-    <div className="absolute w-full z-50 bg-[#E6533C] text-white font-inter lg:my-10 lg:p-0 p-4 px-4">
-      <div className="container mx-auto text-white">
-        <div className="flex items-center justify-between px-2">
-          <MenuOutlined
-    
-            className="lg:hidden md:hidden block text-2xl"
-            onClick={() => {
-              setOpenMenu(true);
-            }}
-          />
-          <Link href={'/'} className="font-bold lg:text-5xl text-4xl text-white italic">Fitness</Link>
-          <div className="lg:flex md:flex items-center justify-center hidden">
-            <AppMenu menuProps={menuProps} servicesProps={servicesProps} className="" />
+    <div>
+
+      {/* Top Nav start ------------------------- */}
+      <div className="bg-black text-white p-3   w-full lg:block md:block hidden">
+        <div className=" flex items-center  justify-between px-6 pr-8   container mx-auto">
+          <div className="">
+            <h3 className=" text-sm">
+              <ClockCircleOutlined style={{ color: "red" }} /> Start on : 09:00
+              AM- 05:00 PM
+            </h3>
+          </div>
+          <div>
+            <p className="text-sm">
+              <MailFilled style={{ color: "red" }} /> Example@example.com
+            </p>
           </div>
         </div>
-        <Drawer
-          open={openMenu}
-          placement="left"
-          onClose={() => {
-            setOpenMenu(false);
-          }}
-        >
-          <AppMenu menuProps={menuProps} servicesProps={servicesProps} className="lg:hidden" isinline />
-        </Drawer>
       </div>
-    </div>
-  );
-};
+      {/* Top Nav End ------------------------- */}
 
-const AppMenu = ({ isinline = false, menuProps, servicesProps }) => {
-  return (
-    <div className="font-inter">
-      <Menu
-        className="text-lg p-6 bg-[#E6533C] custom-menu text-white font-bold"
-        mode={isinline ? "inline" : "horizontal"}
-        items={[
-          {
-            label: (
-              <Dropdown className="" menu={menuProps}>
-                <Space style={{ color: "white" }}>
-                  Home
-                  <DownOutlined />
-                </Space>
+
+      {/* Navbar start ---------------------- */}
+      <nav className="w-full bg-[#E6533C] text-white font-inter p-2  ">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+          {/* Logo----------------- */}
+          <div className="text-4xl font-bold">Fitness</div>
+
+          {/* Desktop Menu-------------------------- */}
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link href={"/"} className="cursor-pointer">
+              Home
+            </Link>
+            <Dropdown overlay={workoutsMenu}>
+              <Link href={"/"} className="cursor-pointer">
+                Workouts
+              </Link>
+            </Dropdown>
+            <Dropdown overlay={classesMenu}>
+              <Link href={"/"} className="cursor-pointer">
+                Classes
+              </Link>
+            </Dropdown>
+
+            <Link href={"/"} className="cursor-pointer">
+              Trainers
+            </Link>
+            <Link href={"/"} className="cursor-pointer">
+              Membership
+            </Link>
+            <Link href={"/"}>Contact Us</Link>
+          </div>
+
+          {/* Mobile Menu Button--------------------------------- */}
+          <div className="md:hidden">
+            <Button icon={<MenuOutlined />} onClick={toggleMobileMenu} />
+          </div>
+        </div>
+
+        {/* Mobile Menu--------------------------------------------------------------- */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-[#E6533C] text-white font-inter border-t  h-screen">
+            <div className="flex flex-col  px-4 py-6 space-y-4">
+              <Link
+                href={"/"}
+                className="cursor-pointer flex items-center gap-4"
+              >
+                {" "}
+                <HomeOutlined /> Home
+              </Link>
+              <Dropdown overlay={workoutsMenu}>
+                <Link
+                  href={"/"}
+                  className="cursor-pointer flex items-center gap-4"
+                >
+                  <FormOutlined /> Workouts
+                </Link>
               </Dropdown>
-            ),
-            key: "home",
-          },
-          {
-            label: (
-              <Dropdown className="" menu={servicesProps}>
-                <Space style={{ color: "white" }}>
-                  Services
-                  <DownOutlined />
-                </Space>
+              <Dropdown overlay={classesMenu}>
+                <Link
+                  href={"/"}
+                  className="cursor-pointer flex items-center gap-4"
+                >
+                  {" "}
+                  <OrderedListOutlined /> Classes
+                </Link>
               </Dropdown>
-            ),
-            key: "services",
-          },
-          {
-            label: (
-              <Link style={{ color: "white" }} href="/#">
-                Contact
+
+              <Link
+                href={"/"}
+                className="cursor-pointer flex items-center gap-4"
+              >
+                {" "}
+                <AlertOutlined />
+                Trainers
               </Link>
-            ),
-            key: "contact Us",
-          },
-          {
-            label: (
-              <Link className="hover:border-b-[#fff]" style={{ color: "white", }} href="/#">
-                About
+              <Link
+                href={"/"}
+                className="cursor-pointer flex items-center gap-4"
+              >
+                {" "}
+                <UserDeleteOutlined /> Membership
               </Link>
-            ),
-            key: "About",
-          },
-          {
-            label: (
-              <Link style={{ color: "white" }} href="/dashboard">
-                Dashboard
+              <Link
+                href={"/"}
+                className="cursor-pointer flex items-center gap-4"
+              >
+                {" "}
+                <PhoneOutlined /> Contact Us
               </Link>
-            ),
-            key: "dashboard",
-          },
-        ]}
-      />
+              <Link
+                href={"/dashboard"}
+                className="cursor-pointer flex items-center gap-4"
+              >
+                {" "}
+                <DashboardOutlined /> Dashboard
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
     </div>
   );
 };
