@@ -87,7 +87,7 @@ const Navbar = () => {
               Home
             </Link>
             <Dropdown overlay={workoutsMenu}>
-              <Link href={"/"} className="cursor-pointer">
+              <Link href={"#training"} className="cursor-pointer">
                 Workouts
               </Link>
             </Dropdown>
@@ -97,7 +97,7 @@ const Navbar = () => {
               </Link>
             </Dropdown>
 
-            <Link href={"/"} className="cursor-pointer">
+            <Link href={"#trainers"} className="cursor-pointer">
               Trainers
             </Link>
             <Link href={"/"} className="cursor-pointer">
@@ -125,12 +125,13 @@ const Navbar = () => {
               </Link>
               <Dropdown overlay={workoutsMenu}>
                 <Link
-                  href={"/"}
+                  href={"training"}
                   className="cursor-pointer flex items-center gap-4"
                 >
                   <FormOutlined /> Workouts
                 </Link>
               </Dropdown>
+              
               <Dropdown overlay={classesMenu}>
                 <Link
                   href={"/"}
@@ -163,13 +164,7 @@ const Navbar = () => {
                 {" "}
                 <PhoneOutlined /> Contact Us
               </Link>
-              <Link
-                href={"/dashboard"}
-                className="cursor-pointer flex items-center gap-4"
-              >
-                {" "}
-                <DashboardOutlined /> Dashboard
-              </Link>
+            
             </div>
           </div>
         )}

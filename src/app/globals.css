@@ -53,3 +53,11 @@ span.anticon.anticon-home.ant-dropdown-menu-item-icon {
 span.anticon.anticon-down.ant-dropdown-menu-item-icon {
   color: white;
 }
+
+.parallax-bg {
+  background-image: url('/image/personaltrainer.png'); /* Replace with your image URL */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

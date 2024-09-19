@@ -9,7 +9,7 @@ import image5 from "../../../public/image/gym4.jpg";
 import girltrainer2 from '../../../public/image/girltrainer3.png'
 const TrainingAndExersize = () => {
   return (
-    <div className="bg-[#001118] text-white p-2 pb-40">
+    <div id="training" className="bg-[#001118] text-white p-2">
       <div className="container mx-auto py-12">
         <div className=" space-y-4 max-w-2xl my-6">
           <h3 className="lg:text-6xl md:text-4xl text-3xl font-bold text-white">

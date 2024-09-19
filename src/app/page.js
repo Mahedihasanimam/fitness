@@ -5,6 +5,8 @@ import Hero from "@/components/Hero";
 import TrainingAndExersize from "@/components/treaining/TrainingAndExersize";
 import { ClockCircleFilled, ClockCircleOutlined, MailFilled, MailOutlined } from "@ant-design/icons";
 import RunSection from "@/components/RunSection";
+import BmiCalculator from "@/components/BMICalculator/BmiCalculator";
+import ContactUs from "@/components/ContactUs";
 
 
 export default function Home() {
@@ -15,6 +17,9 @@ export default function Home() {
       <Habits/>
       <RunSection/>
       <TrainingAndExersize/>
+      <BmiCalculator/>
+
+      <ContactUs/>
       <Footer/>
     </main>
   );

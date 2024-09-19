@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="bg-[#222222] text-white ">
       <div className="container mx-auto">
         {/* NEWS LATER SECTION --------------------------------- */}
-        <div className="lg:flex  hidden  items-center justify-between p-12 bg-[#E6533C] text-center w-10/12 -translate-y-20 mx-auto rounded-md ">
+        <div className="lg:flex  hidden  items-center justify-between p-12 bg-[#E6533C] text-center w-10/12 relative z-50 -translate-y-20 mx-auto rounded-md ">
           <h3 className="text-4xl font-bold">Subscribe to our newsletter</h3>
           <div className="flex items-center justify-between">
           <input className="p-[14px] rounded-full  border-none outline-none text-black" type="email" placeholder="Enter your email" />
