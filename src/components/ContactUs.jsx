@@ -4,14 +4,14 @@ import { Button } from "antd";
 
 const ContactUs = () => {
   return (
-    <div className="relative parallax-bg h-screen flex items-center justify-center">
-      <div className="relative z-10 p-10 rounded-lg  h-full  bg-black bg-opacity-70 w-full  ">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-6xl font-bold text-center text-[#E6533C]  mb-6 py-12 uppercase">
+    <div id="contact" className="relative parallax-bg h-[800px] flex items-center justify-center">
+      <div className="relative z-10 p-10 rounded-lg  h-full  bg-black bg-opacity-75 w-full  ">
+        <div className="lg:max-w-6xl md:max-w-6xl w-full mx-auto">
+          <h2 className="lg:text-6xl md:text-4xl text-3xl font-bold text-center text-[#E6533C]  mb-6 py-12 uppercase">
             Make a free trial
           </h2>
-          <form className="space-y-4">
-            <div className="lg:flex md:flex flex-row items-center justify-between gap-4 ">
+          <form className="space-y-4 w-full">
+            <div className="lg:flex md:flex flex-row items-center justify-between gap-4 lg:space-y-0 md:space-y-0 space-y-4 ">
               <div className="w-full">
              
                 <input

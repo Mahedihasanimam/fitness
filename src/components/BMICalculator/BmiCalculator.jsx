@@ -3,11 +3,11 @@ import React from "react";
 
 const BmiCalculator = () => {
   return (
-    <div className=" bg-gray-900 text-white pb-32">
+    <div className=" bg-gray-900 text-white pb-8">
 
         {/* Top Title Section---------------------------------------- */}
       <div className="container mx-auto">
-        <div className="lg:max-w-2xl lg:text-start md:text-start text-center  p-6 mx-auto pb-24 pt-8">
+        <div className="lg:max-w-2xl lg:text-start text-start   p-6 mx-auto pb-24 pt-8">
           <h1 className="lg:text-5xl text-4xl  font-black mb-4">
             BMI Calculator
           </h1>
@@ -20,7 +20,7 @@ const BmiCalculator = () => {
       </div>
 
   
-        <div className="lg:flex md:flex flex-wrap  justify-between container mx-auto lg:p-10 p-6 space-y-12">
+        <div className="lg:flex md:flex flex-wrap  justify-between container mx-auto lg:p-10 p-6 lg:space-y-0 md:space-y-0 space-y-12">
           {/* BMI Calculator Chart Section */}
           <div className="lg:w-1/2 w-full pr-10 ">
             <div className="mb-6">

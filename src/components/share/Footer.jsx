@@ -72,9 +72,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container mx-auto text-center text-gray-400 p-2 border-t border-gray-400">
+      <div className="container mx-auto text-center text-gray-400 p-4 border-t border-gray-400">
         {" "}
-        &copy; All Right reserved by mehedi{" "}
+        <p>&copy; 2024 Template . Developed by Mehedi Hasan.</p>
       </div>
     </div>
     </div>

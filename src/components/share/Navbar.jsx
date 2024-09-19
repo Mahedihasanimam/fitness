@@ -100,10 +100,10 @@ const Navbar = () => {
             <Link href={"#trainers"} className="cursor-pointer">
               Trainers
             </Link>
-            <Link href={"/"} className="cursor-pointer">
+            <Link href={"#membership"} className="cursor-pointer">
               Membership
             </Link>
-            <Link href={"/"}>Contact Us</Link>
+            <Link href={"#contact"}>Contact Us</Link>
           </div>
 
           {/* Mobile Menu Button--------------------------------- */}

@@ -10,8 +10,8 @@ import girltrainer2 from '../../../public/image/girltrainer3.png'
 const TrainingAndExersize = () => {
   return (
     <div id="training" className="bg-[#001118] text-white p-2">
-      <div className="container mx-auto py-12">
-        <div className=" space-y-4 max-w-2xl my-6">
+      <div className="container mx-auto pb-12">
+        <div className=" space-y-4 max-w-2xl my-6 p-6">
           <h3 className="lg:text-6xl md:text-4xl text-3xl font-bold text-white">
             Trainings and Exercises
           </h3>
@@ -24,19 +24,20 @@ const TrainingAndExersize = () => {
         <div>
           <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 ">
             <div className="relative group col-span-12 lg:col-span-3">
-              <div className="h-full w-full absolute bg-[#06FFD280]  opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+              <div className="h-full w-full absolute bg-[#06FFD280]  opacity-0 group-hover:opacity-50 transition-all duration-500 ease-in-out">
                 <h3 className="p-4 text-white font-bold text-2xl">
                     Couple Training Together
                 </h3>
               </div>
               <Image
                 src={image3}
-                className="w-full  border-2 border-[#4a4b4b80]"
+                className="w-full  border-2 border-[#4a4b4b80] "
                 alt="Fitness"
               />
             </div>
-            <div className="relative group">
-              <div className="h-full w-full absolute bg-[#FF00004D]  opacity-50 transition-opacity duration-300">
+            <div className="relative group" data-aos="fade-up"
+     data-aos-duration="2000">
+              <div className="h-full w-full absolute bg-[#FF00004D] opacity-0 group-hover:opacity-50 transition-all duration-500 ease-in-out">
               <div>
                 <h3 className="p-4 text-white font-bold text-2xl">Push-ups</h3>
               </div>
@@ -48,8 +49,9 @@ const TrainingAndExersize = () => {
                 alt="Fitness"
               />
             </div>
-            <div className="relative group">
-              <div className="h-full w-full absolute bg-[#00000080]  opacity-50 transition-opacity duration-300">
+            <div className="relative group"data-aos="fade-up"
+     data-aos-duration="2500">
+              <div className="h-full w-full absolute bg-[#00000080]  group-hover:opacity-0 opacity-50 transition-opacity duration-300">
        
               </div>
               <Image
@@ -58,8 +60,9 @@ const TrainingAndExersize = () => {
                 alt="Fitness"
               />
             </div>
-            <div className="relative group">
-              <div className="h-full w-full absolute bg-[#42FF004D]  opacity-50 transition-opacity duration-300">
+            <div className="relative group"data-aos="fade-up"
+     data-aos-duration="1500">
+              <div className="h-full w-full absolute bg-[#42FF004D]  opacity-10 group-hover:opacity-50 transition-all duration-500 ease-out">
                 <h3 className="p-4 text-white font-bold text-2xl">
                     Gym Classes
                 </h3>
@@ -70,8 +73,9 @@ const TrainingAndExersize = () => {
                 alt="Fitness"
               />
             </div>
-            <div className="relative group">
-              <div className="h-full w-full absolute bg-[#000]  opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+            <div className="relative group" data-aos="fade-up"
+     data-aos-duration="3000">
+              <div className="h-full w-full absolute bg-[#000]  opacity-0 group-hover:opacity-50 transition-all duration-500 ease-out">
                    <h3 className="p-4 text-white font-bold text-2xl">
                     Gym Classes
                    </h3>
@@ -82,8 +86,9 @@ const TrainingAndExersize = () => {
                 alt="Fitness"
               />
             </div>
-            <div className="relative group col-span-2">
-              <div className="h-full w-full absolute bg-[#FF00004D]  opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+            <div className="relative group col-span-2"data-aos="fade-up"
+     data-aos-duration="3000">
+              <div className="h-full w-full absolute bg-[#FF00004D]  opacity-0 group-hover:opacity-50 transition-all duration-500 ease-out">
               <div>
                 <h3 className="p-4 text-white font-bold text-2xl">Push-ups</h3>
               </div>
