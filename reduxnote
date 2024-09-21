@@ -1,0 +1,129 @@
+Step-by-Step Redux Setup
+Step 1: Create a New Project
+Open Visual Studio Code and create a new project.
+
+Step 2: Create a Folder for Redux
+Inside your project, create a new folder called Redux.
+
+Step 3: Create Necessary Files
+Within the Redux folder, organize your files like this:
+
+store.js (inside Redux/)
+features/ folder (with files like userslice.js, cardslice.js)
+api/ folder (with file like apislice.js)
+Step 4: Install Redux Toolkit and React Redux
+To install the necessary packages, run this command in your terminal:
+
+bash
+Copy code
+npm install @reduxjs/toolkit react-redux
+Folder and File Setup
+Store Configuration
+In the Redux folder, create a file named store.js and add the following code:
+
+Copy code
+<!-- store.js start------------------------------- -->
+import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
+import { apiSlice } from './api/apislice';
+import userslice from './features/userslice';
+import cardslice from './features/cardslice';
+
+export const store = configureStore({
+  reducer: {
+    [apiSlice.reducerPath]: apiSlice.reducer,
+    userslice,
+    cardslice,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
+});
+
+setupListeners(store.dispatch);
+<!-- store.js end------------------------------- -->
+
+
+userslice.js
+In the features folder, create a file named userslice.js and add the following code:
+Copy code
+<!-- userslice.js start--------------------------->
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  name: 'John',
+  age: 30,
+};
+
+const userslice = createSlice({
+  name: 'users',
+  initialState,
+  reducers: {
+    setName: (state, action) => {
+      state.name = action.payload;
+    },
+    setAge: (state, action) => {
+      state.age = action.payload;
+    },
+  },
+});
+
+export const { setName, setAge } = userslice.actions;
+
+export default userslice.reducer;
+<!-- userslice.js end ------------------------------ -->
+
+cardslice.js
+In the features folder, create a file named cardslice.js and add the following code:
+
+<!-- cardslice.js start ---------------------------- -->
+Copy code
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  cards: [],
+};
+
+const cardslice = createSlice({
+  name: 'cards',
+  initialState,
+  reducers: {
+    addCard: (state, action) => {
+      state.cards.push(action.payload);
+    },
+    removeCard: (state, action) => {
+      const index = state.cards.findIndex((card) => card.id === action.payload);
+      state.cards.splice(index, 1);
+    },
+  },
+});
+
+export const { addCard, removeCard } = cardslice.actions;
+
+export default cardslice.reducer;
+<!-- cardslice.js end ---------------------------- -->
+
+
+API
+In the api folder, create a file named apislice.js and add the following code:
+
+<!-- apislice.js start --- ------------------------->
+Copy code
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+export const apiSlice = createApi({
+  reducerPath: 'api',
+  baseQuery: fetchBaseQuery({
+    baseUrl: 'https://jsonplaceholder.typicode.com',
+  }),
+  endpoints: (builder) => ({
+    getUsers: builder.query({
+      query: () => '/users',
+    }),
+    getCards: builder.query({
+      query: () => '/cards',
+    }),
+  }),
+});
+
+export const { useGetUsersQuery, useGetCardsQuery } = apiSlice;
+<!-- apislice.js end --- ------------------------->
