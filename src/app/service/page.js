@@ -1,12 +1,7 @@
-import MyChart from '@/components/dashboard/MyChart';
-import React from 'react';
+import React from "react";
 
-const Service = () => {
-    return (
-        <div>
-            <MyChart/>
-        </div>
-    );
-};
+function page() {
+  return <div>page</div>;
+}
 
-export default Service;
+export default page;
