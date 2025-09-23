@@ -1,9 +1,8 @@
 // src/app/layout.js
 
+import Footer from "@/components/share/Footer";
 import "./globals.css";
 import NavbarWrapper from "@/components/NavbarWrapper";
-
-
 
 export const metadata = {
   title: "Create Next App",
@@ -13,9 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body  className={"font-customfont"}>
+      <body className={"font-customfont"}>
         <NavbarWrapper>
           {children}
+          <Footer />
         </NavbarWrapper>
       </body>
     </html>

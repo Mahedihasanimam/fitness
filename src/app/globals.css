@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -28,21 +28,12 @@ body {
     text-wrap: balance;
   }
 }
-.mymenu .ant-menu-item .ant-menu-item-selected{
-  background-color: red;
-}
-li.ant-menu-item.ant-menu-item-selected{
-  background-color: red;
-}
 
 .ant-dropdown.css-dev-only-do-not-override-d2lrxs.ant-dropdown-placement-bottomLeft {
   width: 200px;
   color: white;
 }
-ul.ant-dropdown-menu.ant-dropdown-menu-root.ant-dropdown-menu-vertical.ant-dropdown-menu-light.css-dev-only-do-not-override-d2lrxs {
-  background-color: #E6533C;
-  
-}
+
 span.ant-dropdown-menu-title-content {
   color: white;
   font-weight: bold;
@@ -55,7 +46,7 @@ span.anticon.anticon-down.ant-dropdown-menu-item-icon {
 }
 
 .parallax-bg {
-  background-image: url('/image/personaltrainer.png'); /* Replace with your image URL */
+  background-image: url("/image/personaltrainer.png"); /* Replace with your image URL */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
