@@ -179,6 +179,7 @@ const RunSection = () => {
               className="flex flex-col sm:flex-row gap-6 items-start sm:items-center"
             >
               <motion.button
+                onClick={() => (window.location.href = "/join_club")}
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"

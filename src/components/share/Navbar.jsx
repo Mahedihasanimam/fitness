@@ -49,6 +49,25 @@ const Navbar = () => {
       ),
     },
     {
+      label: "About",
+      href: "/about",
+      icon: (
+        <svg
+          className="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          />
+        </svg>
+      ),
+    },
+    {
       label: "Workouts",
       href: "#training",
       submenu: [
@@ -73,31 +92,7 @@ const Navbar = () => {
         </svg>
       ),
     },
-    {
-      label: "Classes",
-      href: "#classes",
-      submenu: [
-        { label: "Yoga", href: "#yoga" },
-        { label: "Pilates", href: "#pilates" },
-        { label: "Spinning", href: "#spinning" },
-        { label: "Zumba", href: "#zumba" },
-      ],
-      icon: (
-        <svg
-          className="w-4 h-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-          />
-        </svg>
-      ),
-    },
+
     {
       label: "Trainers",
       href: "#trainers",
@@ -136,9 +131,19 @@ const Navbar = () => {
         </svg>
       ),
     },
+
     {
-      label: "Contact",
-      href: "#contact",
+      label: "Pages",
+      href: "#",
+      submenu: [
+        { label: "Services", href: "/services" },
+        { label: "Trainers", href: "#trainers" },
+        { label: "ContactUs", href: "/contactus" },
+        { label: "Blogs", href: "/blogs" },
+        { label: "Gallery", href: "/gallery" },
+        { label: "Faqs", href: "/wrokouts" },
+        { label: "Terms&Conditions", href: "/terms_and_conditions" },
+      ],
       icon: (
         <svg
           className="w-4 h-4"
@@ -150,7 +155,7 @@ const Navbar = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
           />
         </svg>
       ),
@@ -210,7 +215,6 @@ const Navbar = () => {
             : "py-2 px-3 rounded-lg hover:bg-[#E6533C] hover:bg-opacity-10 transition-all duration-300"
         }`}
         onMouseEnter={() => !isMobile && setIsHovering(item.label)}
-        onMouseLeave={() => !isMobile && setIsHovering(null)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -352,6 +356,7 @@ const Navbar = () => {
             {/* CTA Button */}
             <motion.div className="hidden md:block">
               <motion.button
+                onClick={() => (window.location.href = "/join_club")}
                 className="px-6 py-2 bg-white text-[#E6533C] font-semibold rounded-full border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
@@ -524,6 +529,7 @@ const Navbar = () => {
 
                 {/* Mobile CTA Button */}
                 <motion.button
+                  onClick={() => (window.location.href = "/join_club")}
                   className="w-full py-4 bg-[#E6533C] text-white font-semibold rounded-xl mt-6"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

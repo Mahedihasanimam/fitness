@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import hero from "../../public/image/power-healthy-runner-handsome-lifestyle.png";
+import Router from "next/router";
 
 const Hero = () => {
   // Enhanced animation variants
@@ -197,6 +198,7 @@ const Hero = () => {
             >
               {/* Primary Button */}
               <motion.button
+                onClick={() => (window.location.href = "/join_club")}
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"
