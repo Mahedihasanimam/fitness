@@ -196,6 +196,8 @@ import trainer1 from "../../public/image/trainerone.png";
 import trainer2 from "../../public/image/trainer3.png";
 import trainer3 from "../../public/image/trainer4.png";
 import trainer4 from "../../public/image/trainer5.png";
+import Router from "next/router";
+import Link from "next/link";
 
 const Team = () => {
   const [hoveredTrainer, setHoveredTrainer] = useState(null);
@@ -409,135 +411,141 @@ const Team = () => {
             viewport={{ once: true, margin: "-50px" }}
           >
             {trainers.map((trainer, index) => (
-              <motion.div
-                key={trainer.id}
-                className="group relative flex flex-col lg:flex-row border-2 border-gray-700 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm"
-                variants={cardVariants}
-                whileHover="hover"
-                onHoverStart={() => setHoveredTrainer(trainer.id)}
-                onHoverEnd={() => setHoveredTrainer(null)}
-                custom={index}
-              >
-                {/* Image Container */}
+              <Link href={`/session-booking`}>
                 <motion.div
-                  className="relative lg:w-2/5 overflow-hidden"
-                  variants={imageVariants}
+                  key={trainer.id}
+                  className="group  relative flex flex-col lg:flex-row border-2 border-gray-700 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm"
+                  variants={cardVariants}
+                  whileHover="hover"
+                  onHoverStart={() => setHoveredTrainer(trainer.id)}
+                  onHoverEnd={() => setHoveredTrainer(null)}
+                  custom={index}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#E6533C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                  <Image
-                    alt={trainer.name}
-                    className="w-full h-80 lg:h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                    src={trainer.image}
-                    placeholder="blur"
-                  />
-                  {/* Specialties Badge */}
+                  {/* Image Container */}
                   <motion.div
-                    className="absolute bottom-4 left-4 flex flex-wrap gap-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6 + index * 0.1 }}
+                    className="relative lg:w-2/5 overflow-hidden"
+                    variants={imageVariants}
                   >
-                    {trainer.specialties.map((specialty, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 text-xs font-medium bg-[#E6533C] text-white rounded-full backdrop-blur-sm"
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#E6533C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                    <Image
+                      alt={trainer.name}
+                      className="w-full h-80 lg:h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      src={trainer.image}
+                      placeholder="blur"
+                    />
+                    {/* Specialties Badge */}
+                    <motion.div
+                      className="absolute bottom-4 left-4 flex flex-wrap gap-2"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.6 + index * 0.1 }}
+                    >
+                      {trainer.specialties.map((specialty, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 text-xs font-medium bg-[#E6533C] text-white rounded-full backdrop-blur-sm"
+                        >
+                          {specialty}
+                        </span>
+                      ))}
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Content Container */}
+                  <motion.div
+                    className="flex flex-col justify-center lg:w-3/5 p-6 lg:p-8"
+                    variants={contentVariants}
+                  >
+                    <motion.h3
+                      className="text-3xl lg:text-4xl font-bold capitalize text-[#E6533C] mb-2"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
+                      {trainer.name}
+                    </motion.h3>
+                    <motion.h5
+                      className="text-xl lg:text-2xl font-semibold text-white mb-4"
+                      whileHover={{ x: 5 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        delay: 0.1,
+                      }}
+                    >
+                      {trainer.title}
+                    </motion.h5>
+                    <motion.p
+                      className="text-gray-300 leading-relaxed mb-6 text-sm lg:text-base"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.4 + index * 0.1 }}
+                    >
+                      {trainer.description}
+                    </motion.p>
+
+                    {/* Social Links */}
+                    <motion.div
+                      className="flex space-x-3 mt-auto"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.6 + index * 0.1 }}
+                    >
+                      <motion.a
+                        rel="noopener noreferrer"
+                        href={trainer.social.twitch}
+                        title="Twitch"
+                        className="text-gray-400"
+                        variants={socialIconVariants}
+                        whileHover="hover"
+                        whileTap="tap"
                       >
-                        {specialty}
-                      </span>
-                    ))}
-                  </motion.div>
-                </motion.div>
+                        <TwitchFilled className="p-3 bg-gray-700/50 text-white text-xl rounded-lg backdrop-blur-sm transition-colors duration-300" />
+                      </motion.a>
+                      <motion.a
+                        rel="noopener noreferrer"
+                        href={trainer.social.linkedin}
+                        title="LinkedIn"
+                        className="text-gray-400"
+                        variants={socialIconVariants}
+                        whileHover="hover"
+                        whileTap="tap"
+                      >
+                        <LinkedinFilled className="p-3 bg-gray-700/50 text-white text-xl rounded-lg backdrop-blur-sm transition-colors duration-300" />
+                      </motion.a>
+                      <motion.a
+                        rel="noopener noreferrer"
+                        href={trainer.social.github}
+                        title="GitHub"
+                        className="text-gray-400"
+                        variants={socialIconVariants}
+                        whileHover="hover"
+                        whileTap="tap"
+                      >
+                        <GithubFilled className="p-3 bg-gray-700/50 text-white text-xl rounded-lg backdrop-blur-sm transition-colors duration-300" />
+                      </motion.a>
+                    </motion.div>
 
-                {/* Content Container */}
-                <motion.div
-                  className="flex flex-col justify-center lg:w-3/5 p-6 lg:p-8"
-                  variants={contentVariants}
-                >
-                  <motion.h3
-                    className="text-3xl lg:text-4xl font-bold capitalize text-[#E6533C] mb-2"
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    {trainer.name}
-                  </motion.h3>
-                  <motion.h5
-                    className="text-xl lg:text-2xl font-semibold text-white mb-4"
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400, delay: 0.1 }}
-                  >
-                    {trainer.title}
-                  </motion.h5>
-                  <motion.p
-                    className="text-gray-300 leading-relaxed mb-6 text-sm lg:text-base"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                  >
-                    {trainer.description}
-                  </motion.p>
-
-                  {/* Social Links */}
-                  <motion.div
-                    className="flex space-x-3 mt-auto"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6 + index * 0.1 }}
-                  >
-                    <motion.a
-                      rel="noopener noreferrer"
-                      href={trainer.social.twitch}
-                      title="Twitch"
-                      className="text-gray-400"
-                      variants={socialIconVariants}
-                      whileHover="hover"
-                      whileTap="tap"
+                    {/* CTA Button */}
+                    <motion.button
+                      className="mt-6 cursor-pointer px-6 py-3 bg-gradient-to-r from-[#E6533C] to-[#ff6b4a] text-white font-semibold rounded-lg shadow-lg w-full max-w-xs mx-auto lg:mx-0"
+                      whileHover={{
+                        scale: 1.05,
+                        boxShadow: "0 10px 30px -10px rgba(230, 83, 60, 0.5)",
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400 }}
                     >
-                      <TwitchFilled className="p-3 bg-gray-700/50 text-white text-xl rounded-lg backdrop-blur-sm transition-colors duration-300" />
-                    </motion.a>
-                    <motion.a
-                      rel="noopener noreferrer"
-                      href={trainer.social.linkedin}
-                      title="LinkedIn"
-                      className="text-gray-400"
-                      variants={socialIconVariants}
-                      whileHover="hover"
-                      whileTap="tap"
-                    >
-                      <LinkedinFilled className="p-3 bg-gray-700/50 text-white text-xl rounded-lg backdrop-blur-sm transition-colors duration-300" />
-                    </motion.a>
-                    <motion.a
-                      rel="noopener noreferrer"
-                      href={trainer.social.github}
-                      title="GitHub"
-                      className="text-gray-400"
-                      variants={socialIconVariants}
-                      whileHover="hover"
-                      whileTap="tap"
-                    >
-                      <GithubFilled className="p-3 bg-gray-700/50 text-white text-xl rounded-lg backdrop-blur-sm transition-colors duration-300" />
-                    </motion.a>
+                      Book Session
+                    </motion.button>
                   </motion.div>
 
-                  {/* CTA Button */}
-                  <motion.button
-                    className="mt-6 px-6 py-3 bg-gradient-to-r from-[#E6533C] to-[#ff6b4a] text-white font-semibold rounded-lg shadow-lg w-full max-w-xs mx-auto lg:mx-0"
-                    whileHover={{
-                      scale: 1.05,
-                      boxShadow: "0 10px 30px -10px rgba(230, 83, 60, 0.5)",
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    Book Session
-                  </motion.button>
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#E6533C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                 </motion.div>
-
-                {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#E6533C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-              </motion.div>
+              </Link>
             ))}
           </motion.div>
 

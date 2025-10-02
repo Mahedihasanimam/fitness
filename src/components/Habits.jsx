@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import AIChatbot from "./AIChatbot";
 
 // Animation variants
 const containerVariants = {
@@ -219,6 +220,7 @@ const Habits = () => {
           transition={{ delay: 0.8 }}
         >
           <motion.button
+            onClick={() => (window.location.href = "/join_club")}
             className="px-8 py-3 bg-gradient-to-r from-[#E6533C] to-[#FF7B4A] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             whileHover={{
               scale: 1.05,
@@ -230,6 +232,8 @@ const Habits = () => {
           </motion.button>
         </motion.div>
       </div>
+
+      <AIChatbot />
     </div>
   );
 };

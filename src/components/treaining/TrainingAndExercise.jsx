@@ -286,6 +286,7 @@ const TrainingAndExercise = () => {
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <motion.button
+            onClick={() => (window.location.href = "/join_club")}
             className="bg-[#E6533C] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#d44a34] transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
